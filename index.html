@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap"
+    />
+    <style>
+      *::-webkit-scrollbar {
+        width: 0;
+      }
+    </style>
+  </head>
+  <body class="bg-[#000000f3] text-white min-h-[100vh] font-roboto">
+    <header class="flex justify-between items-center px-3">
+      <div class="flex gap-4 items-center">
+        <img
+          src="images/white-menu.png"
+          id="navToggle"
+          class="w-6 h-6 cursor-pointer hover:bg-trans"
+        />
+        <img src="images/svgexport-6.svg" class="w-28 h-16" />
+      </div>
+      <div class="flex md:w-[50rem] items-center">
+        <input
+          type="search"
+          name="searchbar"
+          placeholder="Search"
+          id="search"
+          class="hidden md:flex bg-transparent border-trans border-[1px] rounded-l-full px-4 py-2 w-full relative outline-none focus:outline-1 focus:outline-blue-700 focus:border-none placeholder:text-trans placeholder:text-lg"
+        />
+        <a
+          href="#"
+          class="md:flex items-center bg-trans rounded-r-full border-gray-600 border-[2px] hidden px-4 py-1"
+        >
+          <img src="images/svgexport-9.svg" class="w-10" title="Search" />
+        </a>
+        <a
+          href="#"
+          class="hidden bg-trans rounded-full md:flex flex-col items-center border-gray-600 border-[1px] ml-10 px-2 py-1"
+        >
+          <img
+            src="images/svgexport-10.svg"
+            title="Search with your voice"
+            class="w-10 h-10"
+          />
+        </a>
+
+        <!-- <button onclick="toggleColors()" class="p-4 bg-white text-black">
+          <img id="modeIcon" src="images/icons8-thumbs-up-24.png" alt="Mode Icon" class="w-6 h-6">
+        </button> -->
+      </div>
+      <div class="flex gap-4 md:gap-10 items-center">
+        <a
+          href="#"
+          class="md:hidden relative inline-block overflow-hidden rounded-full p-2 transition-colors duration-300 hover:bg-trans"
+          ><img src="images/svgexport-9.svg" title="Search" class="w-8"
+        /></a>
+        <a
+          href="#"
+          class="md:hidden relative inline-block overflow-hidden rounded-full p-2 transition-colors duration-300 hover:bg-trans"
+          ><img
+            src="images/svgexport-10.svg"
+            title="Notifications"
+            class="w-7 h-7 relative"
+        /></a>
+        <a
+          href="#"
+          class="relative inline-block overflow-hidden rounded-full p-2 transition-colors duration-300 hover:bg-trans"
+          ><img src="images/svgexport-11.svg" title="Create" class="w-8"
+        /></a>
+        <a
+          href="#"
+          class="relative inline-block overflow-hidden rounded-full p-2 transition-colors duration-300 hover:bg-trans"
+          ><img
+            src="images/icons8-notification-50.png"
+            title="Notifications"
+            class="w-7 h-7 relative"
+        /></a>
+        <p
+          class="absolute right-16 md:right-24 top-4 bg-red-600 rounded-full w-6 flex flex-col text-xs text-center"
+        >
+          9+
+        </p>
+        <a href="#">
+          <img
+            src="images/profile.JPG"
+            alt="your account"
+            class="rounded-full w-10 h-10"
+          />
+        </a>
+      </div>
+    </header>
+    <div
+      class="text-nowrap gap-3 pt-6 pl-4 font-medium overflow-hidden overflow-x-scroll items-center"
+    >
+      <div id="categories" class=" relative flex gap-3 m-auto left-[15rem] overflow-hidden overflow-x-scroll">
+        <button class="category px-3 py-1 rounded-lg bg-gray-100 text-black">
+          All
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          Sketch Comedy
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">Music</button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">Action</button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          Programming
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          Ben Neilson
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          De Mediator
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          Nollywood
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          Tenon Czar
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">Kamas</button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          Bethel Graphics
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          Stan Okeke
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          Samuel Chukwu
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">Benita</button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">Glory</button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          Good Boss
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">Uniport</button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          Sketch Comedy
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          Stan Okeke
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          Good Boss
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          Tenon Czar
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          Ben Neilson
+        </button>
+        <button class="category px-3 py-1 rounded-lg bg-trans">
+          Programming
+        </button>
+      </div>
+    </div>
+    <div
+      id="videoContainer"
+      class="flex md:fixed w-auto gap-3 items-center overflow-y-auto font-medium left-[15rem]"
+    >
+      <section
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 w-[100%] gap-5 items-center mb-8 px-8 flex-grow md:overflow-y-auto md:pb-[15rem] md:h-screen my-6"
+      >
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/Sabinus.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >Investor Sabinus no gree for anybody | Oga Sabinus</a
+              >
+              <a class="text-slate-300 text-sm">Naija VC</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>73K views</span> • <span>11 days ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/Boss-baby.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Baby Boss"
+                class="rounded-full w-10 h-10 bg-gray-500"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >Baby Boss Dance Monkey Cute Funny Baby #bossbabe #bossbaby</a
+              >
+              <a class="text-slate-300 text-sm">Kamran747</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>974K views</span> • <span>4 weeks ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/sydney.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >Sydney Talker Most Expensive Joke</a
+              >
+              <a class="text-slate-300 text-sm">Trend With Khama</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>755K views</span> • <span>2 years ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img
+              src="images/Patoranking.png"
+              alt=""
+              class="rounded-xl w-full"
+            />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >Patoranking - BABYLON [Feat. Victony](Official Music Video)</a
+              >
+              <a class="text-slate-300 text-sm">Patoranking</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>11M views</span> • <span>2 months ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/mr-beast.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >Survice 100 Days Trapped, Win $500,000</a
+              >
+              <a class="text-slate-300 text-sm">MrBeast</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>159M views</span> • <span>1 month ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img
+              src="images/mortal-combat.png"
+              alt=""
+              class="rounded-xl w-full"
+            />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >MORTAL KOMBAT 1 Story All Cutscreen Full Movie 2023 |4k...</a
+              >
+              <a class="text-slate-300 text-sm">MKIceAndFire</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>6.6M views</span> • <span>4 months ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/whos.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >WHEN YOU DON'T MIND YOUR BUSINESS 😂 MrFunny &...</a
+              >
+              <a class="text-slate-300 text-sm">ComedyRoot</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>52K views</span> • <span>3 weeks ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img
+              src="images/brainjotter.png"
+              alt=""
+              class="rounded-xl w-full"
+            />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >Village To High School Ep 8(The Marriage) - Ekwutousi Philo,
+                Brain...</a
+              >
+              <a class="text-slate-300 text-sm">Ekwutousi Philo</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>92K views</span> • <span>2 weeks ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img
+              src="images/willy-kanga.png"
+              alt=""
+              class="rounded-xl w-full"
+            />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="WILLY KANGA"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm">Raise am raise am!!!</a>
+              <a class="text-slate-300 text-sm">Willy Kanga</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>42K views</span> • <span>1 month ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/betty.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="BETTY"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm">THE POLICE OFFICER - BETTY</a>
+              <a class="text-slate-300 text-sm">BETTY</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>310K views</span> • <span>2 months ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/eminem.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >He did an "IMPRESSIONS" of EMINEM! watch how he Knwlled it!</a
+              >
+              <a class="text-slate-300 text-sm">The Best Talent</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>16M views</span> • <span>2 years ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/nolly.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >LOVE AND HOOK UP. NOSA REX. VANDORA. MAUREEN SOLOMON...</a
+              >
+              <a class="text-slate-300 text-sm">Nuella Nolly Movies</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>464K views</span> • <span>1 month ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/Sabinus.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >Investor Sabinus no gree for anybody | Oga Sabinus</a
+              >
+              <a class="text-slate-300 text-sm">Naija VC</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>73K views</span> • <span>11 days ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/Sabinus.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >Investor Sabinus no gree for anybody | Oga Sabinus</a
+              >
+              <a class="text-slate-300 text-sm">Naija VC</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>73K views</span> • <span>11 days ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/Sabinus.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >Investor Sabinus no gree for anybody | Oga Sabinus</a
+              >
+              <a class="text-slate-300 text-sm">Naija VC</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>73K views</span> • <span>11 days ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/Sabinus.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >Investor Sabinus no gree for anybody | Oga Sabinus</a
+              >
+              <a class="text-slate-300 text-sm">Naija VC</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>73K views</span> • <span>11 days ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/Sabinus.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >Investor Sabinus no gree for anybody | Oga Sabinus</a
+              >
+              <a class="text-slate-300 text-sm">Naija VC</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>73K views</span> • <span>11 days ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/Sabinus.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >Investor Sabinus no gree for anybody | Oga Sabinus</a
+              >
+              <a class="text-slate-300 text-sm">Naija VC</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>73K views</span> • <span>11 days ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/Sabinus.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >Investor Sabinus no gree for anybody | Oga Sabinus</a
+              >
+              <a class="text-slate-300 text-sm">Naija VC</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>73K views</span> • <span>11 days ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col w-[100%] m-auto">
+          <a href="#" class="thumbnail bg-gray-400 rounded-xl">
+            <img src="images/Sabinus.png" alt="" class="rounded-xl w-full" />
+          </a>
+          <div class="flex items-start gap-3 pt-3">
+            <a href="#">
+              <img
+                src="images/creatorA.jpg"
+                alt="Investor Sabinus no gree for anybody"
+                class="rounded-full w-10 h-10 bg-gray-500 bgc"
+            /></a>
+
+            <div class="text-wrap flex flex-col text-sm md:text-lg w-[70%]">
+              <a class="text-lg md:text-sm"
+                >Investor Sabinus no gree for anybody | Oga Sabinus</a
+              >
+              <a class="text-slate-300 text-sm">Naija VC</a>
+              <div class="text-slate-300 text-xs md:text-sm">
+                <span>73K views</span> • <span>11 days ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+    <aside
+      id="mainNav"
+      class="hidden md:flex fixed flex-col gap-4 text-nowrap md:overflow-y-auto md:h-screen w-60 pb-28 px-4 md:-mt-[60px]"
+    >
+      <section>
+        <a href="/" class="flex items-center gap-4 bg-trans p-2 rounded-xl">
+          <img src="images/icons8-home-48.png" class="w-6" />
+          <p>Home</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/icons8-youtube-shorts-24.png" class="w-6" />
+          <p>Shorts</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/icons8-subscription-24.png" class="w-6" />
+          <p>Subscriptions</p>
+        </a>
+      </section>
+      <hr />
+      <section>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/icons8-collection-24.png" class="w-6" />
+          <p>Libary</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/icons8-youtube-shorts-24.png" class="w-6" />
+          <p>History</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/icons8-play-64.png" class="w-6" />
+          <p>Your videos</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/icons8-clock-24.png" class="w-6" />
+          <p>Watch Later</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/icons8-thumbs-up-24.png" class="w-6" />
+          <p>Liked videos</p>
+        </a>
+        <button class="flex items-center gap-4 p-2">
+          <img src="images/icons8-down-60.png" class="w-6" />
+          <p>Show more</p>
+        </button>
+      </section>
+      <hr />
+      <section>
+        <h2 class="p-2 font-medium">Subscriptions</h2>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/creatorA.jpg" class="w-6 rounded-full" />
+          <p>Libary</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/creatorA.jpg" class="w-6 rounded-full" />
+          <p>History</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/creatorA.jpg" class="w-6 rounded-full" />
+          <p>Your videos</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/creatorA.jpg" class="w-6 rounded-full" />
+          <p>Watch Later</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/creatorA.jpg" class="w-6 rounded-full" />
+          <p>Liked videos</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/creatorA.jpg" class="w-6 rounded-full" />
+          <p>Liked videos</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/creatorA.jpg" class="w-6 rounded-full" />
+          <p>Liked videos</p>
+        </a>
+        <button class="flex items-center gap-4 p-2">
+          <img src="images/icons8-down-60.png" class="w-6 h-6" />
+          <p>Show 40 more</p>
+        </button>
+      </section>
+      <hr />
+      <section>
+        <h2 class="p-2 font-medium">Explore</h2>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/icons8-trending-32.png" class="w-6 rounded-full" />
+          <p>Trending</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/icons8-music-50.png" class="w-6 rounded-full" />
+          <p>Music</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img
+            src="images/icons8-youtube-gaming-24.png"
+            class="w-6 rounded-full"
+          />
+          <p>Gaming</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img
+            src="images/icons8-google-news-50.png"
+            class="w-6 rounded-full"
+          />
+          <p>News</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/icons8-trophy-48.png" class="w-6 rounded-full" />
+          <p>Sport</p>
+        </a>
+      </section>
+      <hr />
+      <section>
+        <h2 class="p-2 font-medium">More from YouTube</h2>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/YouTube-Emblem.png" class="w-6 rounded-full" />
+          <p>YouTube Premium</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img
+            src="images/icons8-youtube-studio-48.png"
+            class="w-6 rounded-full"
+          />
+          <p>YouTube Studio</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img
+            src="images/icons8-youtube-music-50.png"
+            class="w-6 rounded-full"
+          />
+          <p>YouTube Music</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img
+            src="images/ytkids-removebg-preview.png"
+            class="w-6 rounded-full bg-white"
+          />
+          <p>YouTube Kids</p>
+        </a>
+      </section>
+      <hr />
+      <section>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/icons8-settings-32.png" class="w-6 rounded-full" />
+          <p>Settings</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/icons8-flag-24.png" class="w-6 rounded-full" />
+          <p>Report History</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/icons8-help-24.png" class="w-6 rounded-full" />
+          <p>Help</p>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-2 rounded-xl">
+          <img src="images/icons8-topic-32.png" class="w-6 rounded-full" />
+          <p>Send Feedback</p>
+        </a>
+      </section>
+      <hr />
+      <section class="flex flex-col gap-5 text-gray-300 p-2">
+        <div class="flex flex-wrap gap-3">
+          <a href="#">About</a>
+          <a href="#">Press</a>
+          <a href="#">Copyright</a>
+          <a href="#">Contact us</a>
+          <a href="#">Creator</a>
+          <a href="#">Advertise</a>
+          <a href="#">Developers</a>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Policy & Safety</a>
+          <a href="#">How YouTube Works</a>
+          <a href="#">Test new features</a>
+        </div>
+      </section>
+      <p class="text-gray-600 p-2">&copy; 2024 Google LLC</p>
+    </aside>
+    <div id="imageContainer" class="w-28 px-4 flex text-[10px] md:-mt-[5rem]">
+      <a href="#" class="flex flex-col items-center mb-4 gap-2">
+        <img src="images/icons8-home-48.png" class="w-6" />
+        <p>Home</p>
+      </a>
+      <a href="#" class="flex flex-col items-center mb-4 gap-2">
+        <img src="images/icons8-youtube-shorts-24.png" class="w-6" />
+        <p>Shorts</p>
+      </a>
+      <a href="#" class="flex flex-col items-center mb-4 gap-2">
+        <img src="images/icons8-subscription-24.png" class="w-6" />
+        <p>Subscriptions</p></a
+      >
+
+      <a href="#" class="flex flex-col items-center mb-4 gap-2">
+        <img src="images/icons8-collection-24.png" class="w-6" />
+        <p>You</p>
+      </a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navToggle = document.getElementById("navToggle");
+        const mainNav = document.getElementById("mainNav");
+        const imageContainer = document.getElementById("imageContainer");
+        const videoContainer = document.getElementById("videoContainer");
+        const categories = document.getElementById("categories");
+
+        // Change width
+        navToggle.addEventListener("click", function () {
+          if (imageContainer.style.display === "block") {
+            imageContainer.style.display = "none";
+            videoContainer.style.left = "15rem";
+            categories.style.left = "15rem";
+          } else {
+            mainNav.style.display = "flex";
+            videoContainer.style.left = "8rem";
+            categories.style.left = "8rem";
+          }
+        });
+
+        // Hide the image container initially
+        imageContainer.style.display = "none";
+
+        navToggle.addEventListener("click", function () {
+          if (mainNav.style.display === "flex") {
+            mainNav.style.display = "none";
+            imageContainer.style.display = "block"; // Show image container when nav is closed
+          } else {
+            mainNav.style.display = "flex";
+            imageContainer.style.display = "none"; // Hide image container when nav is open
+          }
+        });
+      });
+
+      // Applying toogle button
+
+//       let isWhiteMode = false;
+
+// function toggleColors() {
+//   const body = document.body;
+//   const modeIcon = document.getElementById('modeIcon');
+
+//   if (isWhiteMode) {
+//     body.classList.remove('bg-white', 'text-black');
+//     body.classList.add('bg-black', 'text-white');
+//     modeIcon.src = 'images/elipsis.svg';
+//   } else {
+//     body.classList.remove('bg-black', 'text-white');
+//     body.classList.add('bg-white', 'text-black');
+//     modeIcon.src = 'dark-mode.png';
+//   }
+
+//   isWhiteMode = !isWhiteMode;
+// }
+
+    </script>
+  </body>
+</html>
